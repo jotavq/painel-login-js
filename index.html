@@ -7,26 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <H1>Painel</H1>
-    </header>
-    <section>
-        <div id="login">
-        <p>Login</p>
-         <input type="email" name="txemail" id="txemail">
-         <p>Senha</p>
-         <input type="password" name="txsenha" id="txsenha">
-         
-         
+
+<header>
+    <h1>Painel</h1>
+</header>
+
+<section>
+    <div id="login" class="login-box">
+        <h2>Login</h2>
+
+        <div class="input-box">
+            <input type="email" name="txemail" id="txemail" required placeholder="">
+            <label>Email</label>
         </div>
-        <input type="button" value="Entrar" onclick="entrar()">
+
+        <div class="input-box">
+            <input type="password" name="txsenha" id="txsenha" required placeholder="">
+            <label>Senha</label>
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox" id="lembrar" onchange="lembrarSenha()"> Lembrar
+            </label>
+            <a href="#" onclick="esqueciSenha()">Esqueceu a senha?</a>
+        </div>
+
+        <input type="button" value="Entrar" class="btn" onclick="entrar()">
+
         <div id="res"></div>
-        
-    </section>
-    <footer>
-        <p>&copy; Painel de login</p>
-    </footer>
-    <script src="script.js"></script>
-    
+
+        <p class="register">
+            Não tem uma conta ? <a href="#" onclick="registrar()">Registrar</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; Painel de login</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
